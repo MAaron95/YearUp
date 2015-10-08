@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class TipCalculator
+{
+
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter the amount for the check:");
+		Scanner sc = new Scanner(System.in);
+		double checkAmount = sc.nextDouble();
+		double tenPercent = tenpercent(checkAmount);
+		double fifteenPercent = fifteenpercent(checkAmount);
+		double twentyPercent = twentypercent(checkAmount);
+		System.out.println("Your 10, 15, and 20 tips are " + tenPercent + " 15 percent " + fifteenPercent + " and 20 percent " + twentyPercent);
+		
+	}
+public static double tenpercent(double amt) {
+	double total = (amt * .1) +amt;
+	return total;
+}
+public static double fifteenpercent(double amt) {
+	double total = (amt * .15) + amt;
+	return total;
+}
+public static double twentypercent(double amt) {
+	double total = (amt * .2)+amt;
+	return total;
+}
+
+}
