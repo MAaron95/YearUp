@@ -16,20 +16,20 @@ public class TipCalculator
 		double fifteenPercent = fifteenpercent(checkAmount);
 		double twentyPercent = twentypercent(checkAmount);
 		System.out.println("Your 10, 15, and 20 tips are " + tenPercent + " 15 percent " + fifteenPercent + " and 20 percent " + twentyPercent);
-		
+
 	}
 	//These are the methods
-public static double tenpercent(double amt) {
-	double total = (amt * .1) +amt;
-	return total;
-}
-public static double fifteenpercent(double amt) {
-	double total = (amt * .15) + amt;
-	return total;
-}
-public static double twentypercent(double amt) {
-	double total = (amt * .2)+amt;
-	return total;
-}
+	public static double tenpercent(double amt) {
+		double total = (amt * .1) +amt;
+		return total;
+	}
+	public static double fifteenpercent(double amt) {
+		double total = (amt * .15) + amt;
+		return total;
+	}
+	public static double twentypercent(double amt) {
+		double total = (amt * .2)+amt;
+		return total;
+	}
 
 }

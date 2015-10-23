@@ -57,6 +57,7 @@ public class ChineseYear
 			break;
 			default:
 				System.out.println("I cannot figure out Chinese year for " + inputYear);
+				break;
 		}
 	}
 
