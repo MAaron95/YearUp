@@ -1,0 +1,47 @@
+
+public class Scientist implements TaxPayer
+{
+		private double m_income = -1;
+		private boolean m_donePayingTaxes = false;
+		
+		Scientist(double income)
+		{
+			SetIncome(income);
+		}
+		
+		public double GetIncome()
+		{ 
+			return m_income;
+		}
+		
+		private void SetIncome(double income)
+		{
+			m_income = income;
+		}
+		
+		public void PayTaxes(double income)
+		{
+			m_income = income;
+		}
+		
+		public void PayTaxes(double income, double taxRate)
+		{
+			if (m_donePayingTaxes == false)
+			{
+				double taxAmount = income * taxRate;
+				double discountedTaxAmount = taxAmount - taxAmount * .1;
+				System.out.println("Scientist is paying the following as tax: " + discountedTaxAmount);
+				SetIncome(income - discountedTaxAmount);
+				System.out.println("My income after paying taxes is: " + GetIncome());
+				m_donePayingTaxes = true;
+			}
+			
+		}
+		@Override
+		public void FileTaxReturn() 
+		 {
+			
+		}
+
+	}
+
