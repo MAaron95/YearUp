@@ -1,6 +1,0 @@
-
-public interface TaxPayer 
-{
-	void PayTaxes(double income, double taxRate);
-	void FileTaxReturn();
-}

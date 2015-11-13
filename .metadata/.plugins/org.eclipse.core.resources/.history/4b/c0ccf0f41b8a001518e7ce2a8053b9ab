@@ -1,0 +1,10 @@
+
+public class FileIOLab {
+
+	public static void main(String[] args) 
+	{
+	System.out.println("Hey young world");	
+
+	}
+
+}
