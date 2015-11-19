@@ -1,0 +1,24 @@
+
+public class Conditionals
+{
+
+private static final int Score = 89;
+
+public static void main(String argv [])
+{
+	System.out.println("Hello Class!");
+
+	tryMyIfStatement();
+}
+
+private static void tryMyIfStatement() {
+	if (Score > 90)
+	{
+		System.out.println("We have an A class");
+	}
+	else
+	{
+		System.out.println("We could do better");
+	}
+}
+}	
