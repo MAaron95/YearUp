@@ -10,10 +10,10 @@ import java.awt.event.ActionEvent;
 public class GUI {
 
 	private JFrame frame;
-	private JTextField textField;
 	private JTextField tF1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField tF2;
+	private JTextField tF3;
+	private JTextField tF4;
 	private JButton btnClear;
 
 	/**
@@ -60,43 +60,52 @@ public class GUI {
 		lblSport.setBounds(24, 115, 46, 14);
 		frame.getContentPane().add(lblSport);
 		
-		textField = new JTextField();
-		textField.setBounds(131, 21, 86, 20);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
-		
 		tF1 = new JTextField();
-		tF1.setBounds(131, 68, 86, 20);
+		tF1.setBounds(131, 21, 86, 20);
 		frame.getContentPane().add(tF1);
 		tF1.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(131, 112, 86, 20);
-		frame.getContentPane().add(textField_2);
-		textField_2.setColumns(10);
+		tF2 = new JTextField();
+		tF2.setBounds(131, 68, 86, 20);
+		frame.getContentPane().add(tF2);
+		tF2.setColumns(10);
+				
 		
-		JButton btnNewButton = new JButton("Who're You?");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				textField_3.setText("Your name is " + textField.getText() + ", you are " + tF1.getText() + " and your favorite hobby is " + textField_2.getText());
+		tF3 = new JTextField();
+		tF3.setBounds(131, 112, 86, 20);
+		frame.getContentPane().add(tF3);
+		tF3.setColumns(10);
+		
+		JButton WhoBtn = new JButton("Who're You?");
+		WhoBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) 
+			{
+				if ((tF3.getText().isEmpty()) || (tF2.getText().isEmpty()) || (tF1.getText().isEmpty()))
+				{
+					tF4.setText("No text was entered, please try again.");
+				}
+				else
+				{
+					tF4.setText("Your name is " + tF1.getText() + ", you are " + tF2.getText() + " and your favorite hobby is " + tF3.getText());
+				}
 			}
 		});
-		btnNewButton.setBounds(96, 170, 121, 23);
-		frame.getContentPane().add(btnNewButton);
+		WhoBtn.setBounds(96, 170, 121, 23);
+		frame.getContentPane().add(WhoBtn);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(29, 204, 395, 47);
-		frame.getContentPane().add(textField_3);
-		textField_3.setColumns(10);
+		tF4 = new JTextField();
+		tF4.setBounds(29, 204, 395, 47);
+		frame.getContentPane().add(tF4);
+		tF4.setColumns(10);
 		
 		btnClear = new JButton("Clear");
 		btnClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) 
 			{
-				textField_3.setText(" ");
+				tF4.setText(" ");
+				tF2.setText(" ");
+				tF3.setText(" ");
 				tF1.setText(" ");
-				textField_2.setText(" ");
-				textField.setText(" ");
 			}
 		});
 		btnClear.setBounds(293, 170, 89, 23);

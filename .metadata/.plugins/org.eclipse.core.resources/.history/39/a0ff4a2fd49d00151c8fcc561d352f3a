@@ -1,0 +1,12 @@
+public class SongList {
+
+	public static void main(String[] args) 
+	{
+		Class_Song song1 = new song();
+		song1.SetRank(1);
+		song1.SetSong("Black Friday");
+		song1.SetArtist("Kendrick Lamrar");
+		
+	}
+
+}

@@ -1,0 +1,47 @@
+
+public class Class_Song {
+	private String m_songName = null;
+	private int m_ranking = -1;
+	private String m_artist = null;
+	
+	Class_Song(String song, int ranking, String artist)
+	{
+		m_songName = song;
+		m_ranking = ranking;
+		m_artist = artist;
+	}
+
+public Class_Song() {
+	
+	}
+
+String GetSong()
+{
+	return m_songName;
+}
+
+private void SetSong(String song)
+{
+	m_songName = song;
+}
+
+int GetRanking()
+{
+	return m_ranking;
+}
+
+private void SetRank(int ranking)
+{
+	m_ranking = ranking;
+}
+
+String GetArtist()
+{
+	return m_artist;
+}
+
+private void SetArtist(String artist)
+{
+	m_artist = artist;
+}
+}

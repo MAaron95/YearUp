@@ -1,0 +1,13 @@
+
+public class Playlist {
+
+	public static void main(String[] args) 
+	{
+		Class_Song Initialize = new Class_Song("Black Friday", 1, "Kendrick Lamar");
+		System.out.println("The song name is " + Initialize.GetSong());
+		System.out.println("The ranking is " + Initialize.GetRanking());
+		System.out.println("The artist is named " + Initialize.GetArtist());
+
+	}
+
+}
